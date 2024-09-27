@@ -20,6 +20,7 @@ public abstract class AbstractApiClient {
      * @param urlStr
      * @return
      */
+
     public String sendPostRequestAndGetResponse(String urlStr, String obj) {
         try {
             //组装请求数据
