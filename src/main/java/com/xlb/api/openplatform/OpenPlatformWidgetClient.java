@@ -2,13 +2,11 @@ package com.xlb.api.openplatform;
 
 import cn.hutool.core.lang.Assert;
 import cn.hutool.json.JSONUtil;
-import com.xlb.TableStructRequest;
 import com.xlb.api.AbstractApiClient;
 import com.xlb.api.ApplicationIDClient;
 import com.xlb.api.WidgetIDClient;
 import com.xlb.conststr.APIURLConst;
-import com.xlb.model.WidgetResponse;
-import com.xlb.model.widget.reimbursement.ReimbursementRequest;
+import com.xlb.entity.widget.reimbursement.ReimbursementRequest;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -53,13 +51,13 @@ public class OpenPlatformWidgetClient extends AbstractApiClient {
         form.setEntry_id(getCurrentEntryID());
 
         form.setData(new HashMap<>());
-        form.getData().put("_widget_1727145447534", new HashMap<>(){{put("value", reimburseData.getUsername());}});
-        form.getData().put("_widget_1727145447535", new HashMap<>(){{put("value", reimburseData.getDate());}});
-        form.getData().put("_widget_1727145447537", new HashMap<>(){{put("value", reimburseData.getAmount());}});
-        form.getData().put("_widget_1727145447536", new HashMap<>(){{put("value", reimburseData.getDesc());}});
+        form.getData().put("_widget_1727145447534", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
+        form.getData().put("_widget_1727145447535", new HashMap<String, String>(){{put("value", reimburseData.getDate());}});
+        form.getData().put("_widget_1727145447537", new HashMap<String, String>(){{put("value", reimburseData.getAmount());}});
+        form.getData().put("_widget_1727145447536", new HashMap<String, String>(){{put("value", reimburseData.getDesc());}});
         //这个提交人的数据设置的有问题
-        form.getData().put("creator", new HashMap<>(){{put("value", reimburseData.getUsername());}});
-        form.getData().put("data_creator", new HashMap<>(){{put("value", reimburseData.getUsername());}});
+        form.getData().put("creator", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
+        form.getData().put("data_creator", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
 
         return JSONUtil.toJsonStr(form);
     }

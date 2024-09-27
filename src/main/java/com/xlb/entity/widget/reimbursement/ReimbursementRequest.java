@@ -1,4 +1,4 @@
-package com.xlb.model.widget.reimbursement;
+package com.xlb.entity.widget.reimbursement;
 
 import lombok.Data;
 

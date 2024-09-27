@@ -3,9 +3,8 @@ package com.xlb.api;
 import cn.hutool.core.lang.Assert;
 import cn.hutool.json.JSONUtil;
 import com.xlb.conststr.APIURLConst;
-import com.xlb.model.WidgetResponse;
-import com.xlb.model.application.ApplicationResponse;
-import com.xlb.model.widget.reimbursement.WidgetRequest;
+import com.xlb.entity.WidgetResponse;
+import com.xlb.entity.widget.reimbursement.WidgetRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

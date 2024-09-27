@@ -3,7 +3,7 @@ package com.xlb.api;
 import cn.hutool.core.lang.Assert;
 import cn.hutool.json.JSONUtil;
 import com.xlb.conststr.APIURLConst;
-import com.xlb.model.application.ApplicationResponse;
+import com.xlb.entity.application.ApplicationResponse;
 import org.springframework.stereotype.Component;
 
 

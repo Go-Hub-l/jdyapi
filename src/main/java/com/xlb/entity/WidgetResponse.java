@@ -1,4 +1,4 @@
-package com.xlb.model;
+package com.xlb.entity;
 
 import lombok.Data;
 

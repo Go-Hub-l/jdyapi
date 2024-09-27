@@ -32,4 +32,10 @@ public class APIURLConst {
      * 当前表单新建单条数据地址
      */
     public static final String CURRENT_FORM_CREATE_DATA_URL = "https://api.jiandaoyun.com/api/v5/app/entry/data/create";
+
+    /**
+     * 当前表单新建单条数据地址
+     */
+    public static final String EMPLOYEE_INFO = "https://api.jiandaoyun.com/api/v5/corp/user/get";
+
 }

@@ -1,4 +1,4 @@
-package com.xlb.model.application;
+package com.xlb.entity.application;
 
 public class ApplicationRequest {
 }
