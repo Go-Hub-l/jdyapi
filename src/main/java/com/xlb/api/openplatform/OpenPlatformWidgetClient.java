@@ -49,15 +49,14 @@ public class OpenPlatformWidgetClient extends AbstractApiClient {
         ReimbursementRequest form = new ReimbursementRequest();
         form.setApp_id(getCurrentApplicationID());
         form.setEntry_id(getCurrentEntryID());
+        form.setData_creator(reimburseData.getUsername());
 
         form.setData(new HashMap<>());
         form.getData().put("_widget_1727145447534", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
         form.getData().put("_widget_1727145447535", new HashMap<String, String>(){{put("value", reimburseData.getDate());}});
         form.getData().put("_widget_1727145447537", new HashMap<String, String>(){{put("value", reimburseData.getAmount());}});
         form.getData().put("_widget_1727145447536", new HashMap<String, String>(){{put("value", reimburseData.getDesc());}});
-        //这个提交人的数据设置的有问题
-        form.getData().put("creator", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
-        form.getData().put("data_creator", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
+
 
         return JSONUtil.toJsonStr(form);
     }
@@ -66,6 +65,7 @@ public class OpenPlatformWidgetClient extends AbstractApiClient {
         String response = sendPostRequestAndGetResponse(APIURLConst.CURRENT_FORM_CREATE_DATA_URL, obj);
         System.out.println(response);
     }
+
     //    public WidgetResponse.Widget getReimbursementWidget() {
 //
 //    }

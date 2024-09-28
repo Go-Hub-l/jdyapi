@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Main-Class: com.xlb.JdyapiApplication
+Class-Path: netty-transport-native-kqueue-4.1.112.Final-osx-aarch_64.jar
+  guava-27.0.1-jre.jar j2objc-annotations-1.1.jar spring-boot-2.7.15.jar
+  netty-transport-native-kqueue-4.1.112.Final-osx-x86_64.jar spring-boot
+ -starter-web-2.7.15.jar netty-transport-rxtx-4.1.112.Final.jar jackson-
+ datatype-jdk8-2.13.5.jar tomcat-embed-core-9.0.79.jar netty-common-4.1.
+ 112.Final.jar netty-transport-native-unix-common-4.1.112.Final.jar spri
+ ng-boot-starter-2.7.15.jar spring-boot-starter-tomcat-2.7.15.jar jackso
+ n-datatype-jsr310-2.17.2.jar spring-web-5.3.39.jar netty-resolver-dns-c
+ lasses-macos-4.1.112.Final.jar hessian-lite-4.0.3.jar spring-boot-start
+ er-logging-2.7.15.jar netty-transport-udt-4.1.112.Final.jar spring-aop-
+ 5.3.39.jar javassist-3.30.2-GA.jar netty-resolver-dns-native-macos-4.1.
+ 112.Final-osx-x86_64.jar logback-classic-1.2.12.jar netty-codec-redis-4
+ .1.112.Final.jar dubbo-zookeeper-spring-boot-starter-3.3.0.jar syncapi-
+ 0.0.3-SNAPSHOT.jar listenablefuture-9999.0-empty-to-avoid-conflict-with
+ -guava.jar dubbo-spring-boot-autoconfigure-3.3.0.jar lombok-1.18.22.jar
+  jackson-module-parameter-names-2.13.5.jar netty-codec-memcache-4.1.112
+ .Final.jar fastjson2-2.0.52.jar netty-transport-classes-kqueue-4.1.112.
+ Final.jar protobuf-java-3.25.4.jar spring-expression-5.3.39.jar jsr305-
+ 3.0.2.jar netty-codec-http2-4.1.112.Final.jar netty-transport-native-ep
+ oll-4.1.112.Final-linux-x86_64.jar dubbo-spring-boot-autoconfigure-comp
+ atible-3.3.0.jar netty-codec-4.1.112.Final.jar netty-codec-socks-4.1.11
+ 2.Final.jar netty-transport-sctp-4.1.112.Final.jar zookeeper-3.7.2.jar 
+ netty-codec-xml-4.1.112.Final.jar checker-qual-2.5.2.jar spring-boot-st
+ arter-json-2.7.15.jar netty-codec-mqtt-4.1.112.Final.jar curator-client
+ -5.1.0.jar log4j-api-2.23.1.jar spring-jcl-5.3.39.jar tomcat-embed-el-9
+ .0.79.jar slf4j-api-1.7.36.jar spring-webmvc-5.3.39.jar dubbo-3.3.0.jar
+  netty-transport-native-epoll-4.1.112.Final-linux-riscv64.jar netty-cod
+ ec-http-4.1.112.Final.jar netty-transport-4.1.112.Final.jar animal-snif
+ fer-annotations-1.17.jar spring-context-5.3.39.jar netty-transport-clas
+ ses-epoll-4.1.112.Final.jar tomcat-embed-websocket-9.0.79.jar curator-x
+ -discovery-5.1.0.jar curator-framework-5.1.0.jar netty-codec-haproxy-4.
+ 1.112.Final.jar netty-handler-proxy-4.1.112.Final.jar netty-all-4.1.112
+ .Final.jar netty-codec-dns-4.1.112.Final.jar netty-transport-native-epo
+ ll-4.1.112.Final-linux-aarch_64.jar hutool-all-5.8.32.jar netty-codec-s
+ mtp-4.1.112.Final.jar netty-resolver-dns-4.1.112.Final.jar jakarta.anno
+ tation-api-1.3.5.jar spring-boot-autoconfigure-2.7.15.jar jackson-datab
+ ind-2.17.2.jar netty-handler-4.1.112.Final.jar netty-resolver-4.1.112.F
+ inal.jar zookeeper-jute-3.7.2.jar log4j-to-slf4j-2.17.2.jar netty-handl
+ er-ssl-ocsp-4.1.112.Final.jar dubbo-spring-boot-starter-3.3.0.jar jacks
+ on-core-2.17.2.jar error_prone_annotations-2.2.0.jar netty-codec-stomp-
+ 4.1.112.Final.jar netty-resolver-dns-native-macos-4.1.112.Final-osx-aar
+ ch_64.jar spring-core-5.3.39.jar snakeyaml-1.30.jar jackson-annotations
+ -2.17.2.jar failureaccess-1.0.1.jar jul-to-slf4j-1.7.36.jar spring-bean
+ s-5.3.39.jar curator-recipes-5.1.0.jar logback-core-1.2.12.jar netty-bu
+ ffer-4.1.112.Final.jar
+

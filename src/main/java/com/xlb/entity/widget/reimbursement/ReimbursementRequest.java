@@ -8,6 +8,7 @@ import java.util.Map;
 public class ReimbursementRequest {
     private String app_id;
     private String entry_id;
+    private String data_creator;
     private String creator;
     private Map<String, Object> data;
 }
