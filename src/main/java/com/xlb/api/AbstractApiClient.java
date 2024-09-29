@@ -40,22 +40,25 @@ public abstract class AbstractApiClient {
             }
 
             int responseCode = conn.getResponseCode();
+            BufferedReader br = null;
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                StringBuilder sb = new StringBuilder();
-                BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String line;
-
-                while ((line = br.readLine()) != null) {
-                    sb.append(line);
-                }
-                String response = sb.toString();
-                br.close();
-                return response;
+                br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            } else {
+                br = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
             }
+            String line;
+            StringBuilder sb = new StringBuilder();
+
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+            String response = sb.toString();
+            br.close();
+            return response;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        return "";
+//        return "";
     }
 }

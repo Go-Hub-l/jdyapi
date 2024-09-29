@@ -6,6 +6,9 @@ import java.util.List;
 
 @Data
 public class EmployeeResponse {
+    private int code;
+    private String msg;
+
     private UserInfo user;
 
     @Data

@@ -11,7 +11,10 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Component
 public class OpenPlatformWidgetClient extends AbstractApiClient {
@@ -42,31 +45,34 @@ public class OpenPlatformWidgetClient extends AbstractApiClient {
     @Override
     protected String getRequestData(String obj) {
         Assert.notBlank(obj, "插入数据时，obj不能为空");
-        ReimburseData reimburseData = JSONUtil.toBean(obj, ReimburseData.class);
-        Assert.notNull(reimburseData, "插入数据时，obj转换失败");
-        Assert.notBlank(reimburseData.getAmount(), "数据有问题");
+        List<ReimburseData> reimburseData = JSONUtil.toList(obj, ReimburseData.class);
+        Assert.notEmpty(reimburseData, "插入数据时，obj转换失败");
 
         ReimbursementRequest form = new ReimbursementRequest();
         form.setApp_id(getCurrentApplicationID());
         form.setEntry_id(getCurrentEntryID());
-        form.setData_creator(reimburseData.getUsername());
+        //默认是第一个报销人
+        form.setData_creator(reimburseData.get(0).getUsername());
 
-        form.setData(new HashMap<>());
-        form.getData().put("_widget_1727145447534", new HashMap<String, String>(){{put("value", reimburseData.getUsername());}});
-        form.getData().put("_widget_1727145447535", new HashMap<String, String>(){{put("value", reimburseData.getDate());}});
-        form.getData().put("_widget_1727145447537", new HashMap<String, String>(){{put("value", reimburseData.getAmount());}});
-        form.getData().put("_widget_1727145447536", new HashMap<String, String>(){{put("value", reimburseData.getDesc());}});
+        form.setData_list(new ArrayList<>());
+
+        List<Map<String, Object>> dataList = form.getData_list();
+        for (ReimburseData reimburse : reimburseData) {
+            Map<String, Object> data = new HashMap<>();
+            data.put("_widget_1727145447534", new HashMap<String, String>(){{put("value", reimburse.getUsername());}});
+            data.put("_widget_1727145447535", new HashMap<String, String>(){{put("value", reimburse.getDate());}});
+            data.put("_widget_1727145447537", new HashMap<String, String>(){{put("value", reimburse.getAmount());}});
+            data.put("_widget_1727145447536", new HashMap<String, String>(){{put("value", reimburse.getDesc());}});
+
+            dataList.add(data);
+        }
 
 
         return JSONUtil.toJsonStr(form);
     }
 
-    public void insert(String obj) {
-        String response = sendPostRequestAndGetResponse(APIURLConst.CURRENT_FORM_CREATE_DATA_URL, obj);
+    public void insertBatch(String obj) {
+        String response = sendPostRequestAndGetResponse(APIURLConst.CURRENT_FORM_CREATE_DATA_LIST_URL, obj);
         System.out.println(response);
     }
-
-    //    public WidgetResponse.Widget getReimbursementWidget() {
-//
-//    }
 }

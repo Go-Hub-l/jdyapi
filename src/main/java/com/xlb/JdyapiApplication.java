@@ -31,8 +31,8 @@ public class JdyapiApplication {
             // 获取Environment对象
             Environment env = context.getEnvironment();
             // 从Environment中读取"spring.application.name"属性值
-            String appName = env.getProperty("spring.application.name");
-            String filePath = System.getProperty("user.home") + File.separator + ".dubbo" +File.separator + appName;
+//            String appName = env.getProperty("spring.application.name");
+            String filePath = System.getProperty("user.home") + File.separator + ".dubbo" +File.separator + "jdyapi";
             // 修改dubbo的本地缓存路径，避免缓存冲突
             System.setProperty("dubbo.meta.cache.filePath", filePath);
             System.setProperty("dubbo.mapping.cache.filePath",filePath);

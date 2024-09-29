@@ -34,8 +34,18 @@ public class APIURLConst {
     public static final String CURRENT_FORM_CREATE_DATA_URL = "https://api.jiandaoyun.com/api/v5/app/entry/data/create";
 
     /**
+     * 插入多条数据地址
+     */
+    public static final String CURRENT_FORM_CREATE_DATA_LIST_URL = "https://api.jiandaoyun.com/api/v5/app/entry/data/batch_create";
+
+    /**
      * 当前表单新建单条数据地址
      */
     public static final String EMPLOYEE_INFO = "https://api.jiandaoyun.com/api/v5/corp/user/get";
+
+    /**
+     * 新增用户地址
+     */
+    public static final String EMPLOYEE_CREATE = "https://api.jiandaoyun.com/api/v5/corp/user/create";
 
 }
